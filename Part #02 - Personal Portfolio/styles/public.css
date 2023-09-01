@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+  --white: #ffffff;
+  --blue: #011f33;
+  --light-blue: #40ade9;
+  --dark-blue: #031827;
+
+  --tran: all 0.3s ease;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-family: Poppins;
+  background-color: var(--dark-blue);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2.5em 0;
+  margin: auto;
+  max-width: 72em;
+  width: 100%;
+}
+.navbar .nav-logo,
+.column .nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.navbar .nav-logo {
+  margin: 0 0 0 1em;
+}
+.nav-logo img {
+  height: 6em;
+}
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 30em;
+}
+.link a {
+  position: relative;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 0 0 0.9em 0;
+  text-decoration: none;
+}
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 0.1em;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-blue);
+  transition: var(--tran);
+}
+.link a:hover::after {
+  width: 100%;
+}
+.btn {
+  width: 10em;
+  padding: 0.6em;
+  color: var(--white);
+  background-color: var(--light-blue);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.4em;
+  border: 0.2em solid var(--light-blue);
+  transition: var(--tran);
+}
+.navbar .nav-btn {
+  margin: 0 1em 0 0;
+}
+.nav-btn:hover,
+.btn1:hover {
+  color: var(--light-blue);
+  background-color: transparent;
+  border-color: var(--light-blue);
+  transition: var(--tran);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1.5em 0;
+  margin: auto;
+  max-width: 72em;
+  width: 100%;
+}
+.container .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 0 1.5em;
+}
+.content h1 {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--light-blue);
+}
+.content h3 {
+  color: var(--light-blue);
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1em 0;
+}
+.content p {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.image img {
+  width: 28em;
+}
+.content .button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 2em 0 0 0;
+  width: 22em;
+}
+.button-wrapper .btn2,
+.card .btn-service {
+  background-color: transparent;
+  color: var(--light-blue);
+}
+.button-wrapper .btn2:hover,
+.card .btn-service:hover {
+  background-color: var(--light-blue);
+  color: var(--white);
+  transition: var(--tran);
+}
+.container .skill-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.skill-area h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.skill-area .skill {
+  position: relative;
+  width: 30em;
+  margin: 1.5em 0 0 0;
+}
+.skill .skill-title {
+  margin: 0 0 0.5em 0;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.skill .skill-bar {
+  position: absolute;
+  width: 100%;
+  background-color: var(--white);
+  height: 1em;
+  z-index: -1;
+  border-radius: 6.25em;
+}
+.skill .skill-fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--light-blue);
+  height: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+}
+.skill-fill .skill-percent {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 0.5em;
+}
+.skill .html {
+  width: 90%;
+}
+.skill .css {
+  width: 85%;
+}
+.skill .javascript {
+  width: 75%;
+}
+.skill .Python {
+  width: 50%;
+}
+.container .service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 4em 0 0 0;
+}
+.service .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 22em;
+  padding: 3em 1.5em;
+  cursor: pointer;
+  background-color: var(--blue);
+  border: 0.2em solid transparent;
+  border-radius: 0.5em;
+  margin: 2.5em 1em 0 1em;
+  transition: var(--tran);
+}
+.service .card:hover {
+  border-color: var(--white);
+}
+.card .card-detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.card-detail h1,
+h3,
+p {
+  color: var(--white);
+}
+.card-detail h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+.card-detail h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+.card-detail p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+}
+.card .btn-service {
+  text-transform: uppercase;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6em 0 0 0;
+  width: inherit;
+}
+.footer .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: inherit;
+}
+.footer-top .column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.column p {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0.8em 0 1.5em 0;
+}
+.column .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.column .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0.1em solid var(--white);
+  padding: 0.4em;
+  font-size: 1.25rem;
+  border-radius: 100%;
+  margin: 0 0.4em;
+  text-align: center;
+  transition: var(--tran);
+}
+.column .social a i {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+.column .social a:hover {
+  background-color: var(--light-blue);
+  border-color: var(--light-blue);
+}
+.column h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 2.5em 0;
+}
+.column a {
+  text-decoration: none;
+  color: var(--white);
+  margin: 0 0 2em 0;
+  transition: var(--tran);
+}
+.column a:hover {
+  color: var(--light-blue);
+}
+.footer .footer-bottom {
+  margin: 2em 0 0 0;
+  padding: 0.5em 0 0 0;
+}
+.footer-bottom p {
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5em;
+}
