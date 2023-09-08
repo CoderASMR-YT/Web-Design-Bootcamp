@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --white: #ffffff;
+  --black: #010101;
+  --bg-item: rgba(0, 0, 0, 0.2);
+  --item-hover: #f1f0f06a;
+  --bg-list: rgba(255, 255, 255, 0.1);
+
+  --tran: 0.3s linear;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  user-select: none;
+  font-family: Poppins;
+  color: var(--white);
+  background: url("../assets/media/background.jpg") center center fixed;
+  background-size: cover;
+}
+.container {
+  width: 30em;
+  padding: 1.5em;
+  background-color: var(--bg-list);
+  border-radius: 0.5em;
+}
+.container h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0 0 0.6em 0;
+}
+.container .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--bg-item);
+  margin: 0.4em;
+  border-radius: 0.5em;
+  padding: 0.6em;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--tran);
+}
+.list .item:hover {
+  transform: scale(1) translate(2em, -1.2em);
+  background-color: var(--item-hover);
+}
+.item .food-img {
+  width: 5em;
+  height: 5em;
+  overflow: hidden;
+  border-radius: 0.8em;
+  margin: 0 1em 0 0;
+}
+.food-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateX(17em);
+  transition: var(--tran);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: var(--bg-item);
+  padding: 1.5em;
+}
+.btn span {
+  opacity: 0.3;
+}
+.content h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 0.5em 0;
+}
+.content p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.list .item:hover .content h2,
+.list .item:hover .content p {
+  color: var(--black);
+}
+.list .item:hover .content .btn {
+  transform: translateX(11.2em);
+}
